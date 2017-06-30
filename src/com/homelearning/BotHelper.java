@@ -11,7 +11,7 @@ public class BotHelper {
     private Robot robot;
     private TableHolder table;
 
-    private static int autoDelay = 100;
+    private static int autoDelay = 50;
 
     public BotHelper() {
         try {
