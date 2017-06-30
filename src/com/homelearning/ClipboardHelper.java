@@ -8,9 +8,6 @@ import java.io.UnsupportedEncodingException;
 public class ClipboardHelper {
     private static final DataFlavor byteFlavor = new DataFlavor(String.class, "String Flavor");
 
-    private static String codePageIn;
-    private static String codePageOut;
-
     public static void putValueToClipboard(String value){
         StringSelection stringSelection = new StringSelection(value);
         Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
@@ -29,26 +26,6 @@ public class ClipboardHelper {
                 e.printStackTrace();
             }
         }
-        result = transformCodePage(result);
         return result;
-    }
-
-    private static String transformCodePage(String in) {
-        String result = in;
-        if (codePageIn != null && codePageOut != null){
-            try {
-                result = new String(result.getBytes(codePageIn), codePageOut);
-            } catch (UnsupportedEncodingException e) {
-                e.printStackTrace();
-            }
-        }
-        return result;
-    }
-    public static void setCodePageIn(String codePageIn) {
-        ClipboardHelper.codePageIn = codePageIn;
-    }
-
-    public static void setCodePageOut(String codePageOut) {
-        ClipboardHelper.codePageOut = codePageOut;
     }
 }
