@@ -83,6 +83,10 @@ public class BotHelper {
         previousColumn();
     }
 
+    public static int getAutoDelay() {
+        return autoDelay;
+    }
+
     public static void setAutoDelay(int autoDelay) {
         BotHelper.autoDelay = autoDelay;
     }

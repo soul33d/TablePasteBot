@@ -10,6 +10,7 @@ public class AppRunner {
             } catch (NumberFormatException e) {
                 e.printStackTrace();
                 System.out.println("Wrong auto delay argument, must be an integer!");
+                System.out.println("Program will use default value: " + BotHelper.getAutoDelay());
             }
         }
 
