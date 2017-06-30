@@ -5,7 +5,8 @@ public class TableHolder {
 
     public TableHolder(String value) {
         table = value.split("[\t]");
-        System.out.println(table.length);
+        System.out.println("Elements to paste: " + (table.length - 1));
+        System.out.println("Number of items in the program: " + (table.length - 1)/2);
     }
 
     public int getSize(){
