@@ -3,7 +3,6 @@ package com.homelearning;
 import java.awt.*;
 import java.awt.datatransfer.*;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 
 public class ClipboardHelper {
     private static final DataFlavor byteFlavor = new DataFlavor(String.class, "String Flavor");
